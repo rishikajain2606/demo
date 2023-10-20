@@ -18,6 +18,12 @@ import { SPRINGBOOTComponent } from './spring-boot/spring-boot.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PopularCoursesComponent } from './popular-courses/popular-courses.component';
+import { RESTUsersComponent } from './rest-users/rest-users.component';
+import { HttpClientModule } from '@angular/common/http';
+import { User } from './user.interface';
+import { UserService } from './user.service';
+
+
 
 @NgModule({
   declarations: [
@@ -36,15 +42,17 @@ import { PopularCoursesComponent } from './popular-courses/popular-courses.compo
        JAVAComponent,
        ANGULARComponent,
        SPRINGBOOTComponent,
-       PopularCoursesComponent
+       PopularCoursesComponent,
+       RESTUsersComponent
   ],
   imports: [
     BrowserModule,
     routes,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
