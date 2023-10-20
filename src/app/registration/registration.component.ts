@@ -8,7 +8,7 @@ import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
-  title = 'Angular Form Validation';
+  title = 'Please';
   angForm!: FormGroup;
   constructor(private fb: FormBuilder) {
    this.createForm();
