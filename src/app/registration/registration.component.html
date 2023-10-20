@@ -1,0 +1,40 @@
+<!-- <form action="">
+    <label for="Username">Username</label>
+    <input type="text" id="Username"><br>
+    <label for="pwd">Password</label>
+    <input type="password" id="pwd"><br>
+    
+</form> -->
+
+<form #f="ngForm" novalidate (ngSubmit)="save(f.value, f.form.valid)" id="form2">
+          <!-- we will place our fields here -->
+          <!--name-->
+          <div>
+          <label class="fw-bold">Name</label>
+          <!--bind name to ngModel, it's required with minimum 5 characters-->
+          <input type="text" name="name" [(ngModel)]="user.name" #name="ngModel" required minlength="5" class="form-control">
+          <!--show error only when field is not valid & it's dirty or form submited-->
+          <small [hidden]="name.valid || (name.pristine && !f.submitted)">
+          Name is required (minimum 5 characters).
+          </small>
+          </div>
+          
+          <!--adrress group-->
+          <div ngModelGroup="address">
+          <!--street-->
+          <div>
+       
+      <label class="fw-bold">Street</label>
+          <input type="text" name="street" [(ngModel)]="user.address.street" #street="ngModel" required class="form-control">
+          <small [hidden]="street.valid || (street.pristine && !f.submitted)" class="text-danger">
+          Street is required.
+          </small>
+          </div>
+          <!--postcode-->
+          <div>
+          <label class="fw-bold">Post code</label>
+          <input type="text" name="postcode" [(ngModel)]="user.address.postcode" class="form-control">
+          </div>
+          </div>
+          <button class="btn btn-success" type="submit">Submit</button>
+    </form>

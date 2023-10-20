@@ -1,0 +1,62 @@
+<div class="container contact2">
+    <div class="row">
+        <div class="col-sm">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29472.35554793965!2d88.39689748523837!3d22.577441028544374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02751a8836be6b%3A0xc1c70408fdb5e9bc!2sLTIMindtree!5e0!3m2!1sen!2sin!4v1697440680952!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="maps"></iframe>
+        </div>
+        <!-- <div class="col-sm">
+            <form action="" class="contact3">
+                <label for="Name"><b>Name</b></label>
+                <input type="text" id="Name"><br>
+                <label for="mobno"><b>Mobile No</b></label>
+                <input type="text" id="mobno"><br>
+                <label for="add"><b>Address</b></label>
+                <input type="text" id="mobno"><br>
+            </form>
+        </div> -->
+        <div class="col-sm">
+            <form #f="ngForm" novalidate (ngSubmit)="save(f.value, f.form.valid)" id="form2">
+                      <!-- we will place our fields here -->
+                      <!--name-->
+                      <div>
+                      <label class="fw-bold">Name</label>
+                      <!--bind name to ngModel, it's required with minimum 5 characters-->
+                      <input type="text" name="name" [(ngModel)]="user.name" #name="ngModel" required minlength="5" class="form-control">
+                      <!--show error only when field is not valid & it's dirty or form submited-->
+                      <small [hidden]="name.valid || (name.pristine && !f.submitted)">
+                      Name is required (minimum 5 characters).
+                      </small>
+                      </div>
+                      
+                      <!--adrress group-->
+                      <div ngModelGroup="address">
+                      <!--street-->
+                      <div>
+                   
+                  <label class="fw-bold">Street</label>
+                      <input type="text" name="street" [(ngModel)]="user.address.street" #street="ngModel" required class="form-control">
+                      <small [hidden]="street.valid || (street.pristine && !f.submitted)" class="text-danger">
+                      Street is required.
+                      </small>
+                      </div>
+                      <!--postcode-->
+                      <div>
+                      <label class="fw-bold">Post code</label>
+                      <input type="text" name="postcode" [(ngModel)]="user.address.postcode" class="form-control">
+                      </div>
+                      </div>
+                      <button class="btn btn-success" type="submit">Submit</button>
+                </form>
+        </div>
+        <div class="col-sm add2">
+            L&T House, Ballard Estate
+            Larsen & Toubro Limited
+            L&T House, Ballard Estate
+            P. O. Box: 278,
+            Mumbai 400 001
+            India
+        </div>
+    </div>
+</div>
