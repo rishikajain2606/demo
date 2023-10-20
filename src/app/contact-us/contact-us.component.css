@@ -3,7 +3,7 @@
     width: 330px;
 }
 .contact2{
-    border: 3px solid black;
+    border: 1px solid black;
     
 }
 /* .contact3{
@@ -14,7 +14,7 @@
     margin: 5px;
 } */
 #form2{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 10px;
     width: 400px;
     height: 450px;
@@ -25,7 +25,6 @@
 }
 .add2{
     background-color: rgb(236, 204, 215);
-    border: 1px solid black;
     height: 250px;
     margin-top: 80px;
     padding: 25px;
