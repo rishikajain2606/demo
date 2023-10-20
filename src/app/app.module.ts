@@ -16,6 +16,7 @@ import { JAVAComponent } from './java/java.component';
 import { ANGULARComponent } from './angular/angular.component';
 import { SPRINGBOOTComponent } from './spring-boot/spring-boot.component';
 import { FormsModule } from '@angular/forms';
+import { PopularCoursesComponent } from './popular-courses/popular-courses.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FormsModule } from '@angular/forms';
        ContactUsComponent,
        JAVAComponent,
        ANGULARComponent,
-       SPRINGBOOTComponent
+       SPRINGBOOTComponent,
+       PopularCoursesComponent
   ],
   imports: [
     BrowserModule,
