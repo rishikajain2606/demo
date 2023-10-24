@@ -21,37 +21,63 @@
                       <!-- we will place our fields here -->
                       <!--name-->
                       <div>
-                      <label class="fw-bold">Name</label>
-                      <!--bind name to ngModel, it's required with minimum 5 characters-->
-                      <input type="text" name="name" [(ngModel)]="user.name" #name="ngModel" required minlength="5" class="form-control">
-                      <!--show error only when field is not valid & it's dirty or form submited-->
-                      <small [hidden]="name.valid || (name.pristine && !f.submitted)">
-                      Name is required (minimum 5 characters).
-                      </small>
-                      </div>
-                      
+                          <label class="fw-bold">Name</label>
+                          <!--bind name to ngModel, it's required with minimum 5 characters-->
+                          <input type="text" name="name" [(ngModel)]="user.name" #name="ngModel" required minlength="5"
+                        class="form-control">
+                          <!--show error only when field is not valid & it's dirty or form submited-->
+                          <small [hidden]="name.valid || (name.pristine && !f.submitted)">
+                              Name is required (minimum 5 characters).
+                              </small>
+                          </div>
+                     
                       <!--adrress group-->
                       <div ngModelGroup="address">
-                      <!--street-->
-                      <div>
-                   
-                  <label class="fw-bold">Street</label>
-                      <input type="text" name="street" [(ngModel)]="user.address.street" #street="ngModel" required class="form-control">
-                      <small [hidden]="street.valid || (street.pristine && !f.submitted)" class="text-danger">
-                      Street is required.
-                      </small>
-                      </div>
-                      <!--postcode-->
-                      <div>
-                      <label class="fw-bold">Post code</label>
-                      <input type="text" name="postcode" [(ngModel)]="user.address.postcode" class="form-control">
-                      </div>
-                      </div>
+                          <!--street-->
+                          <div>
+                           
+                          <label class="fw-bold">Street</label>
+                              <input type="text" name="street" [(ngModel)]="user.address.street" #street="ngModel"
+                            required class="form-control">
+                              <small [hidden]="street.valid || (street.pristine && !f.submitted)" class="text-danger">
+                                  Street is required.
+                                  </small>
+                              </div>
+                          <!--phoneNumber-->
+                    <!--       <div>
+                              <label class="fw-bold">Phone Number</label>
+                              <input type="text" name="mobile" [(ngModel)]="user.mobile"
+                            class="form-control">
+                              </div> -->
+
+                        <!-- 9999 -->
+
+                        <div>
+                                  <label class="fw-bold">Mobile Number</label>
+                                  <!--bind name to ngModel, it's required with minimum 5 characters-->
+                                  <input type="text" name="mobile" [(ngModel)]="user.mobile" #mobile="ngModel" required minlength="10"
+                                class="form-control">
+                                  <!--show error only when field is not valid & it's dirty or form submited-->
+                                  <small [hidden]="mobile.valid || (mobile.pristine && !f.submitted)">
+                                      Mobile Number( required 10 digit).
+                                      </small>
+                                  </div>
+
+
+
+                        <!--postcode-->
+                    <div>
+                              <label class="fw-bold">Post code</label>
+                              <input type="text" name="postcode" [(ngModel)]="user.address.postcode"
+                            class="form-control">
+                              </div>
+                         
+                </div>
                       <button class="btn btn-success" type="submit">Submit</button>
-                </form>
+            </form>
         </div>
         <div class="col-sm add2">
-            <i class="bi bi-geo-alt-fill fs-1" ></i>
+            <i class="bi bi-geo-alt-fill fs-1"></i>
             L&T House, Ballard Estate
             Larsen & Toubro Limited
             L&T House, Ballard Estate

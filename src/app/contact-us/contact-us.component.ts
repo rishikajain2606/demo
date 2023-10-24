@@ -12,6 +12,7 @@ export class ContactUsComponent {
   ngOnInit() {       // we will initialize our form here
     this.user = {
     name: '',
+    mobile: '',
     address: {
     street: '',
     postcode: '' // set default value to 8000
