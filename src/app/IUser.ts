@@ -3,4 +3,11 @@ export interface IUser {
     name: String;
     email: String;
     website: String;
+address: {
+    street: string; // required
+    suite: string;
+    city: string;
+    zipcode: string
+}
+
 }

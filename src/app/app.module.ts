@@ -22,6 +22,9 @@ import { RESTUsersComponent } from './rest-users/rest-users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { User } from './user.interface';
 import { UserService } from './user.service';
+import { RPAComponent } from './rpa/rpa.component';
+import { DevopsComponent } from './devops/devops.component';
+import { MeanStackComponent } from './mean-stack/mean-stack.component';
 
 
 
@@ -43,7 +46,10 @@ import { UserService } from './user.service';
        ANGULARComponent,
        SPRINGBOOTComponent,
        PopularCoursesComponent,
-       RESTUsersComponent
+       RESTUsersComponent,
+       RPAComponent,
+       DevopsComponent,
+       MeanStackComponent
   ],
   imports: [
     BrowserModule,

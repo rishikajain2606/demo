@@ -78,91 +78,124 @@
     <p>Form status: {{ angForm.status | json }}</p>
   </div> -->
 
-  <div class="container">
+<div class="container">
     <div class="row">
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-            <img src="./assets/sale2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title my-0" style="color: #f89b19; text-align: center;">Register Now</h5>
-              
-              <span class="mx-5"><button type="button" class="btn btn-warning">Register</button></span>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="./assets/sale2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title my-0" style="color: #f89b19; text-align: center;">Register Now</h5>
 
-              
+                    <span class="mx-5"><button type="button" class="btn btn-warning">Register</button></span>
+
+
+                </div>
             </div>
-          </div>
-      </div>
-      <div class="col-8">
-        <div class="container" id="form2">
+        </div>
+        <div class="col-8">
+            <div class="container" id="form2">
 
-            <h1>
-        
-                Register Here {{title}}!!
-        
-            </h1>
-        
-            <form [formGroup]="angForm" novalidate>
-        
-                <div class="form-group">
-        
-                    <label>Name:</label>
-        
-                    <input class="form-control" formControlName="name" type="text">
-        
-                </div>
-        
-                <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
-                    class="alert alert-danger error">
-        
-                    <div *ngIf="angForm.controls['name'].errors">
-                         Name is required.
+                <h1>
+
+                    Register Here {{title}}
+
+                </h1>
+
+                <form [formGroup]="angForm" novalidate>
+
+                    <div class="form-group">
+
+                        <label>FirstName:</label>
+
+                        <input class="form-control" formControlName="name" type="text">
+
                     </div>
-                </div>
-        
-                <div class="form-group">
-        
-                    <label>Mobile No:</label>
-        
-                    <input class="form-control" formControlName="mobile" type="text">
-        
-                </div>
-        
-                <div *ngIf="angForm.controls['mobile'].invalid && (angForm.controls['mobile'].dirty || angForm.controls['mobile'].touched)"
-                    class="alert alert-danger error">
-                    <div *ngIf="angForm.controls['mobile'].errors">
-                        Mobile Number is required.
+
+                    <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
+                        class="alert alert-danger error">
+
+                        <div *ngIf="angForm.controls['name'].errors">
+                            FirstName is required.
+                        </div>
                     </div>
+
+                    <div class="form-group">
+                        <label>LastName:</label>
+                        <input class="form-control" formControlName="lname" type="text">
                     </div>
-        
-                <div class="form-group">
-                    <label>Address:</label>
-                    <input class="form-control" formControlName="address" type="text">
-        
-                </div>
-        
-                <div *ngIf="angForm.controls['address'].invalid && (angForm.controls['address'].dirty || angForm.controls['address'].touched)"
-                    class="alert alert-danger error">
-        
-                    <div *ngIf="angForm.controls['address'].errors">
-        
-                        address is required.
-        
+
+                    <div *ngIf="angForm.controls['lname'].invalid && (angForm.controls['lname'].dirty || angForm.controls['lname'].touched)"
+                        class="alert alert-danger error">
+
+                        <div *ngIf="angForm.controls['lname'].errors">
+                            LastName is required.
+                        </div>
                     </div>
-        
-                </div>
-        
-                <button type="submit" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
-        
-                    Save
-        
-                </button>
-        
-            </form>
-            <br />
-            <p>Form value: {{ angForm.value | json }}</p>
-            <p>Form status: {{ angForm.status | json }}</p>
-          </div>
-      </div>
-      
+
+                    <div class="form-group">
+                        <label> Residense Address:</label>
+                        <input class="form-control" formControlName="address" type="text">
+
+                    </div>
+
+                    <div *ngIf="angForm.controls['address'].invalid && (angForm.controls['address'].dirty || angForm.controls['address'].touched)"
+                        class="alert alert-danger error">
+
+                        <div *ngIf="angForm.controls['address'].errors">
+
+                            address is required.
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label> Office Address:</label>
+                        <input class="form-control" formControlName="officeaddress" type="text">
+
+                    </div>
+
+                    <div *ngIf="angForm.controls['officeaddress'].invalid && (angForm.controls['officeaddress'].dirty || angForm.controls['officeaddress'].touched)"
+                        class="alert alert-danger error">
+
+                        <div *ngIf="angForm.controls['officeaddress'].errors">
+
+                            office address is required.
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+
+                        <label>Mobile No:</label>
+
+                        <input class="form-control" formControlName="mobile" type="text">
+
+                    </div>
+
+                    <div *ngIf="angForm.controls['mobile'].invalid && (angForm.controls['mobile'].dirty || angForm.controls['mobile'].touched)"
+                        class="alert alert-danger error">
+                        <div *ngIf="angForm.controls['mobile'].errors">
+                            Mobile Number is required.
+                        </div>
+                    </div>
+
+                    <button type="submit" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+
+                        Save
+
+                    </button>
+
+                </form>
+                <br />
+                <p>Form value: {{ angForm.value | json }}</p>
+                <p>Form status: {{ angForm.status | json }}</p>
+            </div>
+        </div>
+
     </div>
-  </div>
+</div>

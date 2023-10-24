@@ -15,9 +15,11 @@ export class RegistrationComponent {
  }
   createForm() {
    this.angForm = this.fb.group({
-      name: ['', Validators.required ],
+      name: ['', Validators.required,],
+      lname: ['',Validators.required],
       address: ['', Validators.required ],
-      mobile: ['', Validators.required ]
+      officeaddress: ['', Validators.required ],
+      mobile: ['', Validators.minLength(10)]
      
    });
  }

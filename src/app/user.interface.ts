@@ -3,5 +3,6 @@ export interface User {
     address: {
     street: string; // required
     postcode: string;
+    
     }
     }
