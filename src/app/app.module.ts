@@ -25,6 +25,7 @@ import { UserService } from './user.service';
 import { RPAComponent } from './rpa/rpa.component';
 import { DevopsComponent } from './devops/devops.component';
 import { MeanStackComponent } from './mean-stack/mean-stack.component';
+import { HelpCompComponent } from './help-comp/help-comp.component';
 
 
 
@@ -49,7 +50,8 @@ import { MeanStackComponent } from './mean-stack/mean-stack.component';
        RESTUsersComponent,
        RPAComponent,
        DevopsComponent,
-       MeanStackComponent
+       MeanStackComponent,
+       HelpCompComponent
   ],
   imports: [
     BrowserModule,

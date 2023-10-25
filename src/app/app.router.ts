@@ -17,6 +17,7 @@ import { RESTUsersComponent } from './rest-users/rest-users.component';
 import { MeanStackComponent } from './mean-stack/mean-stack.component';
 import { RPAComponent } from './rpa/rpa.component';
 import { DevopsComponent } from './devops/devops.component';
+import { HelpCompComponent } from './help-comp/help-comp.component';
 
 //Create and export a variable called Router in the app.routing.ts, which would be a collection of all routes inside the Angular application.
 // pathMatch is specifying a strict matching of path to reach the destination page.
@@ -36,7 +37,8 @@ export const router: Routes = [
     {path:'rest-users', component:RESTUsersComponent},
     {path:'mean-stack', component:MeanStackComponent},
     {path:'rpa', component: RPAComponent},
-    {path:'devops', component:DevopsComponent}
+    {path:'devops', component:DevopsComponent},
+    {path:'help-comp', component:HelpCompComponent}
 ];
 //RouterModule.forRoot is for creating routes for the entire application
 //  pass the routes array in the RouterModule using RouterModule.forRoot(router)
